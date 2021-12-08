@@ -3,7 +3,6 @@ package Easy.maxSubArray;
 public class maxSubSolution {
     
     /**
-     * 
      * @return max contiguous sub-array
      */
 
