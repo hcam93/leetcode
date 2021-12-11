@@ -3,6 +3,11 @@ package Easy.isPalindromNumber;
 public class isPalindromNumberSolution {
     
 
+    /**
+     * simple two pointer problems 
+     * @param x
+     * @return boolean of number if palindrome
+     */
     public static boolean isPalindrome(int x){
         if(x < 0) return false;
         if(x / 10 == 0) return true;
