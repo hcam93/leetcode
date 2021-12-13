@@ -11,6 +11,10 @@ public class closestSocketSolution {
      * @return shortest distance, 0 if target doesnt exist.
      */
 
+     /**
+      * This is a two pointer problem that uses index tricks using mod factor with math. 
+      */
+
     public static int findClosest(String[] tools, String target, int index){
         if(tools.length < 2) return 0;
         if(index < 0 || index >= tools.length) return 0;
@@ -40,5 +44,6 @@ public class closestSocketSolution {
         System.out.println(findClosest(new String[]{"A", "B", "D", "C", "C"}, "C", 1) == 2);
         System.out.println(findClosest(new String[]{"A"}, "A", 0) == 0);
         System.out.println(findClosest(new String[]{"A", "B", "D", "F", "C", "C", "K", "L", "R", "T", "Y"}, "Y", 4) == 5);
+        System.out.println((1 + 5) % 5);
     }
 }
