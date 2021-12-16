@@ -26,7 +26,7 @@ public class letterComboPhoneNumberSolution {
         numberToChar.put(8, List.of("t", "u", "v"));
         numberToChar.put(9, List.of("w", "x", "y", "z"));
         Queue<String> queue = new LinkedList<>();
-        for(int i=0; i < digits.length(); i++){
+        for(int i = 0; i < digits.length(); i++){
             String currentDig = String.valueOf(digits.charAt(i));
             List<String> allNums = numberToChar.get(Integer.valueOf(currentDig));
             if(queue.isEmpty()){
@@ -35,7 +35,7 @@ public class letterComboPhoneNumberSolution {
                 Queue<String> tempQueue = new LinkedList<>();
                 while(!queue.isEmpty()){
                     String currentString = queue.poll();
-                    for(int j =0; j < allNums.size(); j++){
+                    for(int j = 0; j < allNums.size(); j++){
                         tempQueue.add(currentString + allNums.get(j));
                     }
                 }
@@ -44,8 +44,6 @@ public class letterComboPhoneNumberSolution {
         }
         List<String> list = new ArrayList<>(queue);
         return list;
-
-        
     }
 
     public static void main(String[] args) {
