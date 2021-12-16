@@ -15,7 +15,7 @@ public class letterComboPhoneNumberSolution {
     //This is a BFS or DFS solution, the run time is always exponential. 
 
     public static List<String> letterCombo(String digits){
-        if(digits.equals(null)) return List.of();
+        if(digits.equals(null) || digits.isEmpty()) return List.of();
         HashMap<Integer, List<String>> numberToChar = new HashMap<>(7);
         numberToChar.put(2, List.of("a", "b", "c"));
         numberToChar.put(3, List.of("d", "e", "f"));
@@ -49,6 +49,6 @@ public class letterComboPhoneNumberSolution {
     }
 
     public static void main(String[] args) {
-        System.out.println(letterCombo("23"));
+        System.out.println(letterCombo("23").equals(List.of("ad","ae","af","bd","be","bf","cd","ce","cf")));
     }
 }
